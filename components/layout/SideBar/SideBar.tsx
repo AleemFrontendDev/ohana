@@ -13,7 +13,7 @@ import trend from '@/public/assets/trend-down.svg';
 import money from '@/public/assets/money-change.svg';
 import group from '@/public/assets/group.svg';
 import emptyWallet from '@/public/assets/empty-wallet-change.svg';
-import rocket from '@/public/assets/rocket.svg';
+import rocket from '@/public/assets/Rocket.svg';
 import notificationStatus from '@/public/assets/notification-status.svg';
 import user from '@/public/assets/user-octagon.svg';
 import arrow from '@/public/assets/arrow.svg';
