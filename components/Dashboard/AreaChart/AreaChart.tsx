@@ -4,19 +4,28 @@ import React, { useEffect, useState } from "react";
 import { AreaChart, Area, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
 
 const chartData = [
-  { month: "Jan", members: 800, visitors: 600, subscribers: 400 },
-  { month: "Feb", members: 900, visitors: 700, subscribers: 500 },
-  { month: "Mar", members: 950, visitors: 750, subscribers: 550 },
-  { month: "Apr", members: 1000, visitors: 770, subscribers: 570 },
-  { month: "May", members: 970, visitors: 750, subscribers: 550 },
-  { month: "Jun", members: 980, visitors: 760, subscribers: 560 },
-  { month: "Jul", members: 960, visitors: 740, subscribers: 540 },
-  { month: "Aug", members: 940, visitors: 720, subscribers: 520 },
-  { month: "Sep", members: 900, visitors: 680, subscribers: 480 },
-  { month: "Oct", members: 870, visitors: 670, subscribers: 470 },
-  { month: "Nov", members: 850, visitors: 660, subscribers: 460 },
-  { month: "Dec", members: 820, visitors: 650, subscribers: 450 },
+  { month: "Jan", members: 100, savings: 600, loans: 400 },
+  { month: "Feb", members: 120, savings: 650, loans: 450 },
+  { month: "Mar", members: 150, savings: 630, loans: 420 },
+  { month: "Apr", members: 170, savings: 680, loans: 470 },
+  { month: "May", members: 190, savings: 650, loans: 440 },
+  { month: "Jun", members: 210, savings: 690, loans: 480 },
+  { month: "Jul", members: 230, savings: 670, loans: 460 },
+  { month: "Aug", members: 250, savings: 700, loans: 490 },
+  { month: "Sep", members: 300, savings: 660, loans: 470 },
+  { month: "Oct", members: 110, savings: 680, loans: 480 },
+  { month: "Nov", members: 280, savings: 650, loans: 460 },
+  { month: "Dec", members: 120, savings: 670, loans: 470 },
 ];
+
+
+const COLORS = {
+  loans: "#3B82F6",
+  savings: "#22C55E",
+  members: "#FFA500",
+};
+
+
 
 const StyledAreaChart = () => {
   const [isClient, setIsClient] = useState(false);
@@ -36,11 +45,11 @@ const StyledAreaChart = () => {
                 <stop offset="5%" stopColor="#FFA500" stopOpacity={0.8} />
                 <stop offset="95%" stopColor="#FFA500" stopOpacity={0} />
               </linearGradient>
-              <linearGradient id="colorVisitors" x1="0" y1="0" x2="0" y2="1">
+              <linearGradient id="colorSavings" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="#22C55E" stopOpacity={0.8} />
                 <stop offset="95%" stopColor="#22C55E" stopOpacity={0} />
               </linearGradient>
-              <linearGradient id="colorSubscribers" x1="0" y1="0" x2="0" y2="1">
+              <linearGradient id="colorLoans" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="#3B82F6" stopOpacity={0.8} />
                 <stop offset="95%" stopColor="#3B82F6" stopOpacity={0} />
               </linearGradient>
@@ -53,17 +62,17 @@ const StyledAreaChart = () => {
             <Tooltip />
             <Area
               type="monotone"
-              dataKey="subscribers"
+              dataKey="loans"
               stackId="1"
               stroke="#3B82F6"
-              fill="url(#colorSubscribers)"
+              fill="url(#colorLoans)"
             />
             <Area
               type="monotone"
-              dataKey="visitors"
+              dataKey="savings"
               stackId="1"
               stroke="#22C55E"
-              fill="url(#colorVisitors)"
+              fill="url(#colorSavings)"
             />
             
             <Area

@@ -108,8 +108,6 @@ const data = [
 
 export default function SupervisorsTable() {
 
-    const [isChecked, setIsChecked] = useState(false);
-
   return (
     <>
       <Card className="mt-10 p-5 shadow-custom ">
@@ -179,7 +177,7 @@ export default function SupervisorsTable() {
                     <TableCell>
                         <label className="relative inline-flex items-center cursor-pointer">
                         <input type="checkbox" value="" className="sr-only peer" />
-                            <div className="group peer ring-0 bg-[#110D1566]  rounded-full outline-none duration-300 after:duration-300 w-12 h-6  shadow-md peer-checked:bg-[#110D1566]  peer-focus:outline-none  after:content-['✖️']  after:rounded-full after:absolute after:bg-[#110D15] after:outline-none after:h-6 after:w-6 after:top-0 after:left-0 after:flex after:justify-center after:items-center peer-checked:after:translate-x-6 peer-checked:after:content-['✔️'] peer-hover:after:scale-95">
+                            <div className="group peer ring-0 bg-[#110D1566]  rounded-full outline-none duration-300 after:duration-300 w-8 h-4  shadow-md peer-checked:bg-[#110D1566]  peer-focus:outline-none  after:content-['❌'] after:text-[10px] after:rounded-full after:absolute after:bg-[#110D15] after:outline-none after:h-4 after:w-4 after:top-0 after:left-0 after:flex after:justify-center after:items-center peer-checked:after:translate-x-4 peer-checked:after:content-['✔️'] peer-hover:after:scale-95">
                             </div>
                         </label>
                     </TableCell>

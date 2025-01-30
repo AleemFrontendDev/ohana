@@ -12,7 +12,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Dot } from 'lucide-react';
 
 import StyledAreaChart from '@/components/Dashboard/AreaChart/AreaChart'
 import RadialChart from '@/components/Dashboard/RadialChart/RadialChart'
