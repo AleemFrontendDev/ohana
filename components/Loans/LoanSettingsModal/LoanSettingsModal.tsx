@@ -33,22 +33,22 @@ const LoanSettingsModal: React.FC<LoanSettingsModalProps> = ({isOpen, setIsOpen}
             <span className="bg-[#110D15] text-white w-10 h-10 flex justify-center items-center rounded-lg">
                 <Settings className="w-6 h-6" />
             </span>
-            <DialogHeader>
+            <DialogHeader className="mt-5">
                 <DialogTitle className="flex items-center gap-2">
-                Groups Setting
+                Loan Setting
                 </DialogTitle>
                 <p className="text-sm text-gray-500">
                 United States OF America | Basic | 6 Months
                 </p>
             </DialogHeader>
 
-            <div>
+            <div className="mt-5">
                 <Label className="text-[#333843] text-sm">Country* (Auto-Filled)</Label>
                 <Input className="h-10 bg-[#F7F8FA] border-2 border-[#DCDCDC]" placeholder="USA" />
             </div>
             
             {/* General Fees Section */}
-            <div>
+            <div className="mt-5">
                 <Label className="text-[#333843] text-base">General Fees</Label>
                 <div className="">
                     <div className="my-4 flex items-center gap-3">
@@ -56,8 +56,15 @@ const LoanSettingsModal: React.FC<LoanSettingsModalProps> = ({isOpen, setIsOpen}
                         <Label className="font-normal">Insurance</Label>
                     </div>
                     <div className="flex flex-col md:flex-row gap-4">
-                        <Input className="h-10 bg-[#F7F8FA] border-2 border-[#DCDCDC]" placeholder="Insurance %" />
-                        <Input className="h-10 bg-[#F7F8FA] border-2 border-[#DCDCDC]" placeholder="USA" />
+                        <Input className="h-10  border-2 border-[#DCDCDC]" placeholder="Insurance %" />
+                        <Select>
+                            <SelectTrigger className=" h-[40px] rounded-lg outline-none border-2 border-[#DCDCDC] text-gray-400">
+                            <SelectValue placeholder="Rate" />
+                            </SelectTrigger>
+                            <SelectContent>
+                            <SelectItem value="Type">Type</SelectItem>
+                            </SelectContent>
+                        </Select>
                     </div>
                 </div>
 
@@ -67,8 +74,15 @@ const LoanSettingsModal: React.FC<LoanSettingsModalProps> = ({isOpen, setIsOpen}
                         <Label className="font-normal">Service Fees</Label>
                     </div>
                     <div className="flex flex-col md:flex-row gap-4">
-                        <Input className="h-10 bg-[#F7F8FA] border-2 border-[#DCDCDC]" placeholder="Service Fees %" />
-                        <Input className="h-10 bg-[#F7F8FA] border-2 border-[#DCDCDC]" placeholder="USA" />
+                        <Input className="h-10  border-2 border-[#DCDCDC]" placeholder="Service Fees %" />
+                        <Select>
+                            <SelectTrigger className=" h-[40px] rounded-lg outline-none border-2 border-[#DCDCDC] text-gray-400">
+                            <SelectValue placeholder="Rate" />
+                            </SelectTrigger>
+                            <SelectContent>
+                            <SelectItem value="Type">Type</SelectItem>
+                            </SelectContent>
+                        </Select>
                     </div>
                 </div>
 
@@ -78,15 +92,22 @@ const LoanSettingsModal: React.FC<LoanSettingsModalProps> = ({isOpen, setIsOpen}
                         <Label className="font-normal">Tax</Label>
                     </div>
                     <div className="flex flex-col md:flex-row gap-4">
-                        <Input className="h-10 bg-[#F7F8FA] border-2 border-[#DCDCDC]" placeholder="Tax %" />
-                        <Input className="h-10 bg-[#F7F8FA] border-2 border-[#DCDCDC]" placeholder="USA" />
+                        <Input className="h-10  border-2 border-[#DCDCDC]" placeholder="Tax %" />
+                        <Select>
+                            <SelectTrigger className=" h-[40px] rounded-lg outline-none border-2 border-[#DCDCDC] text-gray-400">
+                            <SelectValue placeholder="Rate" />
+                            </SelectTrigger>
+                            <SelectContent>
+                            <SelectItem value="Type">Type</SelectItem>
+                            </SelectContent>
+                        </Select>
                     </div>
                 </div>
 
             </div>
             
             {/* Grace Period Section */}
-            <div>
+            <div className="mt-5">
                 <Label className="text-[#333843] text-base">Grace Period</Label>
                 <div className="flex items-center gap-5">
                     <div className="my-4 flex items-center gap-3">
@@ -158,7 +179,7 @@ const LoanSettingsModal: React.FC<LoanSettingsModalProps> = ({isOpen, setIsOpen}
             </div>
 
             {/* Other Conditions */}
-            <div>
+            <div className="mt-5">
                 <div className="mb-3">
                     <Label className="text-[#333843] text-base">Other Conditions</Label>
                 </div>
@@ -186,7 +207,7 @@ const LoanSettingsModal: React.FC<LoanSettingsModalProps> = ({isOpen, setIsOpen}
                 </div>
             </div>
 
-            <div>
+            <div className="mt-5">
                 <div className="my-4">
                     <Label className="text-[#333843] text-base">Interests Rate</Label>
                 </div>
@@ -951,10 +972,9 @@ const LoanSettingsModal: React.FC<LoanSettingsModalProps> = ({isOpen, setIsOpen}
             </div>
 
             {/* Footer */}
-            <DialogFooter className="mt-20">
+            <DialogFooter className="mt-20 flex flex-row justify-between items-center">
                 <Button
                 variant="ghost"
-                onClick={() => setIsOpen(false)}
                 className="border border-gray-300 w-[140px] h-[45px]"
                 >
                 Update

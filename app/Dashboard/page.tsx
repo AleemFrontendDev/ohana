@@ -12,11 +12,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { Dot } from 'lucide-react';
 
 import StyledAreaChart from '@/components/Dashboard/AreaChart/AreaChart'
 import RadialChart from '@/components/Dashboard/RadialChart/RadialChart'
 import UserTable from '@/components/Dashboard/Table/RecentTransactionTable'
-import AnalyticCards from '@/components/layout/AnalyticCards/AnalyticCards'
+import AnalyticDashboardCards from "@/components/Dashboard/DashboardCards/Cards"
 
 const Home = () => {
 
@@ -51,12 +52,17 @@ const Home = () => {
       </Card>
 
       {/* Cards Sections */}
-      <AnalyticCards/>
+      <AnalyticDashboardCards/>
         
       <div className='mt-5 flex flex-col lg:flex-row gap-10'>
-        <Card className='lg:w-[70%] border-0 shadow-lg'>
-          <CardHeader>
+        <Card className='lg:w-[70%] border-0 shadow-custom'>
+          <CardHeader className="flex flex-row justify-between">
             <CardTitle>Member, Saving, Loans</CardTitle>
+            <div className="flex items-center gap-3">
+              <p className="flex gap-1 items-center "><span className="w-3 h-3 bg-yellow-500 rounded-full"></span> Members</p>
+              <p className="flex gap-1 items-center "><span className="w-3 h-3 bg-green-500 rounded-full"></span> Savings</p>
+              <p className="flex gap-1 items-center "><span className="w-3 h-3 bg-blue-500 rounded-full"></span> Loans</p>
+            </div>
           </CardHeader>
           <StyledAreaChart/>
           <Card className='m-5 p-5 flex flex-wrap justify-between items-center'>

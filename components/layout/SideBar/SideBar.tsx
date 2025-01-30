@@ -50,12 +50,9 @@ const Sidebar: React.FC<{ setSidebarOpen: (isOpen: boolean) => void }> = ({ setS
   
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 768) {
+      if (window.innerWidth < 1200) {
         setIsOpen(false);
         setSidebarOpen(false);
-      } else {
-        setIsOpen(true);
-        setSidebarOpen(true);
       }
     };
   

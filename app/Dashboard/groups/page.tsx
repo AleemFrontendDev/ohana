@@ -17,8 +17,8 @@ import {
 
 import { Settings } from 'lucide-react';
 import UserTable from '@/components/Groups/UserTable/UserTable'
-import AnalyticCards from '@/components/layout/AnalyticCards/AnalyticCards'
 import Link from 'next/link';
+import AnalyticGroupsCards from '@/components/Groups/GroupCards/Cards';
 
 const Groups = () => {
 
@@ -61,7 +61,7 @@ const Groups = () => {
       </Card>
       
       {/* Cards Sections Component */}
-      <AnalyticCards/>
+      <AnalyticGroupsCards/>
 
       {/* User Table Section */}
       <UserTable/>

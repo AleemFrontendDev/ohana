@@ -5,6 +5,7 @@ import global from "@/public/Loan_Request_icons/global.svg"
 import user from '@/public/Dashboard_Icons/user-octagon.svg'
 import Image from 'next/image'
 import SupervisorsTable from '@/components/Supervisors/SuperVisorsTable'
+import { Button } from '@/components/ui/button'
 
 const Supervisors = () => {
 
@@ -20,6 +21,9 @@ const Supervisors = () => {
                 <CardTitle className='text-[32px] text-[#1A1C21]'>Supervisors</CardTitle>
                 <CardDescription className='text-[16px] text-[#667085]'>Here’s what happening with your Supervisors</CardDescription>
             </CardHeader>
+            <Button className='h-[45px] rounded-lg'>
+                Add Supervisor
+            </Button>
         </Card>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mt-5">

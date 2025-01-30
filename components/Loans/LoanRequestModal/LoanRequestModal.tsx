@@ -79,7 +79,7 @@ const LoanRequestModal: React.FC<LoanRequestModalProps> = ({isOpen, setIsOpen}) 
             <span className="bg-[#110D15] text-white w-12 h-12 flex justify-center items-center rounded-lg">
                 <Image src={copyIcon} alt="copy icon" className="filter invert w-7"/>
             </span>
-            <DialogHeader>
+            <DialogHeader className="mt-5">
                 <DialogTitle className="flex items-center gap-2">
                     Loan Request Details
                 </DialogTitle>
@@ -88,7 +88,7 @@ const LoanRequestModal: React.FC<LoanRequestModalProps> = ({isOpen, setIsOpen}) 
                 </p>
             </DialogHeader>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-5">
                 {
                     loanRequestData.map((data, id) => (
                         <div key={id} className="flex gap-2">
@@ -99,7 +99,7 @@ const LoanRequestModal: React.FC<LoanRequestModalProps> = ({isOpen, setIsOpen}) 
                 }
             </div>
 
-            <div>
+            <div className="mt-5">
                 {recommendations.map((data, id) => (
                     <div key={id} className="mt-5">
                         <div className="mb-2">
@@ -117,7 +117,7 @@ const LoanRequestModal: React.FC<LoanRequestModalProps> = ({isOpen, setIsOpen}) 
                 ))}
             </div>
 
-            <div>
+            <div className="mt-5">
                 <div className="mb-2">
                     <Label className="text-lg">ID Verification</Label>
                 </div>

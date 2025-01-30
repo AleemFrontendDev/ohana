@@ -13,9 +13,9 @@ import {
     SelectValue,
   } from "@/components/ui/select"
 import { Settings } from "lucide-react";
-import AnalyticCards from '@/components/layout/AnalyticCards/AnalyticCards';
 import LoanUserTable from '@/components/Loans/UserTable/UserTable';
 import Link from 'next/link';
+import AnalyticLoansCards from '@/components/Loans/LaonsCards/Cards';
 
 const Loans = () => {
   return (
@@ -55,7 +55,7 @@ const Loans = () => {
             </div>
         </Card>
 
-        <AnalyticCards/>
+        <AnalyticLoansCards/>
 
         <LoanUserTable/>
     </div>

@@ -3,10 +3,6 @@
 import React, { useEffect, useState } from "react";
 import { AreaChart, Area, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
 
-import {
-  CardContent,
-} from "@/components/ui/card";
-
 const chartData = [
   { month: "Jan", members: 800, visitors: 600, subscribers: 400 },
   { month: "Feb", members: 900, visitors: 700, subscribers: 500 },

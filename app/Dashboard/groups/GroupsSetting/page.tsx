@@ -53,7 +53,7 @@ const GroupsSetting = () => {
           <span className="bg-[#110D15] text-white w-10 h-10 flex justify-center items-center rounded-lg">
             <Settings className="w-6 h-6" />
           </span>
-          <DialogHeader>
+          <DialogHeader className="mt-5">
             <DialogTitle className="flex items-center gap-2">
               Groups Setting
             </DialogTitle>
@@ -63,7 +63,7 @@ const GroupsSetting = () => {
           </DialogHeader>
 
           {/* Form Fields */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4 mt-5">
             <div>
               <Label className="text-[#333843] text-sm">Country* (Auto-Filled)</Label>
               <Input className="h-10 bg-[#F7F8FA] border-2 border-[#DCDCDC]" placeholder="USA" readOnly />
@@ -110,7 +110,7 @@ const GroupsSetting = () => {
           </div>
 
           {/* Footer */}
-          <DialogFooter>
+          <DialogFooter className="mt-5">
             <Button
               variant="ghost"
               onClick={() => setIsOpen(false)}
